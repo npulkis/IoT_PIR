@@ -10,13 +10,13 @@ def flash_led(repeat):
     for i in range(0, repeat):
         GPIO.output(11, True)
         GPIO.output(8, False)
-        time.sleep(0.5)
+        time.sleep(0.05)
         GPIO.output(11, False)
         GPIO.output(8, True)
-        time.sleep(0.5)
+        time.sleep(0.05)
     GPIO.cleanup()
     
 
 if __name__ == '__main__':
-    flash_led(10)
+    flash_led(100)
     
